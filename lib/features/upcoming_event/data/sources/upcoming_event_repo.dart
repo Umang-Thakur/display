@@ -19,7 +19,7 @@ class UpcomingEventRemoteImpl implements UpcomingEventRemote {
 
   @override
   Future<List<UpcomingEventDetailModel>> getEvent(int id) async {
-    Response response = await client.get(url + id.toString() + '/');
+    Response response = await client.get(url_detail + id.toString() + '/');
 
     if (response.statusCode == 200) {
       return upcomingEventDetailListfromJson(response.data['images']);

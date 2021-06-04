@@ -1,5 +1,7 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:display/features/banner/domain/entities/banner_entity.dart';
 import 'package:display/features/banner/presentation/widgets/bannerDetail.dart';
+import 'package:display/features/banner/presentation/widgets/loading.dart';
 import 'package:flutter/material.dart';
 
 class BannerList extends StatelessWidget {
@@ -45,21 +47,26 @@ class BannerList extends StatelessWidget {
                       //   fit: BoxFit.fill,
                       //   alignment: Alignment.topCenter,
                       // )),
-                      child: Image.network(
-                        list[index].imageUrl,
-                        fit: BoxFit.fill,
-                        // alignment: Alignment.topCenter,
-                        loadingBuilder: (BuildContext context, Widget child,
-                            ImageChunkEvent loadingProgress) {
-                          if (loadingProgress == null) return child;
-                          return Center(
-                              child: CircularProgressIndicator(
-                            value: loadingProgress.expectedTotalBytes != null
-                                ? loadingProgress.cumulativeBytesLoaded /
-                                    loadingProgress.expectedTotalBytes
-                                : null,
-                          ));
-                        },
+                      // child: Image.network(
+                      //   list[index].imageUrl,
+                      //   fit: BoxFit.fill,
+                      //   // alignment: Alignment.topCenter,
+                      //   loadingBuilder: (BuildContext context, Widget child,
+                      //       ImageChunkEvent loadingProgress) {
+                      //     if (loadingProgress == null) return child;
+                      //     return Center(
+                      //         child: CircularProgressIndicator(
+                      //       value: loadingProgress.expectedTotalBytes != null
+                      //           ? loadingProgress.cumulativeBytesLoaded /
+                      //               loadingProgress.expectedTotalBytes
+                      //           : null,
+                      //     ));
+                      //   },
+                      // ),
+                      child: CachedNetworkImage(
+                        imageUrl: list[index].imageUrl,
+                        placeholder: (context, url) => LoadingIndicator(),
+                        errorWidget: (context, url, error) => Icon(Icons.error),
                       ),
                     ),
                   ),

@@ -9,7 +9,7 @@ class UpcomingEventDetailModel extends UpcomingEventDetail {
   UpcomingEventDetailModel({
     @required int id,
     @required int upcomingEvent,
-    @required String sequenceNo,
+    @required int sequenceNo,
     @required String image,
   }) : super(
             id: id,

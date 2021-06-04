@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 class UpcomingEventDetail {
   final int id;
   final String image;
-  final String sequenceNo;
+  final int sequenceNo;
   final int upcomingEvent;
 
   UpcomingEventDetail(

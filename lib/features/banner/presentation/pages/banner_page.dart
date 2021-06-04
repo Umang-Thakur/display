@@ -8,21 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:display/injection_container.dart';
 
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Home Page'),
-      ),
-      body: SingleChildScrollView(
-        child: buildBody(context),
-      ),
-    );
-  }
-}
-
-BlocProvider<BannerBloc> buildBody(BuildContext context) {
+BlocProvider<BannerBloc> buildBanner(BuildContext context) {
   return BlocProvider(
     create: (_) => sl<BannerBloc>(),
     child: Column(

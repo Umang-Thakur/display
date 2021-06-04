@@ -11,6 +11,8 @@ class UpcomingeventInitial extends UpcomingeventState {}
 
 class UpcomingeventLoading extends UpcomingeventState {}
 
+class UpcomingeventListLoading extends UpcomingeventState {}
+
 class UpcomingeventListLoaded extends UpcomingeventState {
   final List<UpcomingEvent> list;
 

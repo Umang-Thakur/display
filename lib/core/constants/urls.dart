@@ -4,8 +4,8 @@ const currUrl = endpoint;
 
 const urlCategoryList = currUrl + '/category/';
 
-const urlBannerList = urlCategoryList + '/banner/';
+const urlBannerList = urlCategoryList + 'banner/';
 
-const urlUpcomingEvent = urlCategoryList + '/upcoming_event/';
+const urlUpcomingEvent = urlCategoryList + 'upcoming_event/';
 
-const urlUpcomingEventDetail = urlCategoryList + '/upcoming_event_image/';
+const urlUpcomingEventDetail = urlCategoryList + 'upcoming_event_image/';

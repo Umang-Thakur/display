@@ -35,6 +35,8 @@ dependencies:
   dio: ^4.0.0
   # Connectivity
   data_connection_checker: ^0.3.4
+  # Connection_timeout
+  cached_network_image: ^3.0.0
   
 
 
