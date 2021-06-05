@@ -18,7 +18,7 @@ const String NETWORK_FAILURE_MESSAGE = 'Network Failure';
 
 class CategoryBloc extends Bloc<CategoryEvent, CategoryState> {
   final CategoryRepository repository;
-  CategoryBloc(this.repository) : super(CategoryInitial());
+  CategoryBloc({@required this.repository}) : super(CategoryInitial());
 
   @override
   Stream<CategoryState> mapEventToState(

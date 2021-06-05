@@ -10,7 +10,7 @@ class CategoryModel extends CategoryEntity {
   CategoryModel({
     @required int id,
     @required String name,
-    @required String sequenceNo,
+    @required int sequenceNo,
     List<ImageModel> images,
   }) : super(id: id, name: name, sequenceNo: sequenceNo, images: images);
 

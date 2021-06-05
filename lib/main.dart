@@ -1,4 +1,5 @@
 import 'package:display/features/banner/presentation/pages/banner_page.dart';
+import 'package:display/features/category/presentation/pages/category_list_page.dart';
 import 'package:display/features/slider/presentation/pages/slider_list_page.dart';
 import 'package:display/features/upcoming_event/presentation/pages/upcoming_event_page.dart';
 import 'package:flutter/material.dart';
@@ -37,6 +38,7 @@ class HomePage extends StatelessWidget {
             buildBanner(context),
             buildUpcomingEvent(context),
             buildSlider(context),
+            buildCategories(context),
           ],
         ),
       ),

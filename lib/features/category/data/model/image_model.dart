@@ -9,8 +9,8 @@ class ImageModel extends ImageEntity {
     @required int id,
     @required String title,
     @required String image,
-    @required String categoryId,
-    @required String sequenceNo,
+    @required int categoryId,
+    @required int sequenceNo,
   }) : super(
             categoryId: categoryId,
             title: title,

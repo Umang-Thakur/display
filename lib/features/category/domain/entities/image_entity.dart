@@ -4,8 +4,8 @@ class ImageEntity {
   final int id;
   final String title;
   final String image;
-  final String categoryId;
-  final String sequenceNo;
+  final int categoryId;
+  final int sequenceNo;
 
   ImageEntity(
       {@required this.id,

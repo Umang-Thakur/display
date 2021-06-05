@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 class CategoryEntity {
   final int id;
   final String name;
-  final String sequenceNo;
+  final int sequenceNo;
   List<ImageEntity> images;
 
   CategoryEntity(
