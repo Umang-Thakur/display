@@ -22,6 +22,6 @@ class ImageModel extends ImageEntity {
       id: json['id'],
       title: json['title'],
       image: json['image'],
-      categoryId: json['categoryId'],
-      sequenceNo: json['sequenceNo']);
+      categoryId: json['category_id'],
+      sequenceNo: json['sequence_no']);
 }

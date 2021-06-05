@@ -1,4 +1,5 @@
 import 'package:display/features/banner/presentation/pages/banner_page.dart';
+import 'package:display/features/slider/presentation/pages/slider_list_page.dart';
 import 'package:display/features/upcoming_event/presentation/pages/upcoming_event_page.dart';
 import 'package:flutter/material.dart';
 import 'package:display/injection_container.dart' as di;
@@ -35,6 +36,7 @@ class HomePage extends StatelessWidget {
           children: [
             buildBanner(context),
             buildUpcomingEvent(context),
+            buildSlider(context),
           ],
         ),
       ),

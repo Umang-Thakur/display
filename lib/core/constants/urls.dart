@@ -9,3 +9,7 @@ const urlBannerList = urlCategoryList + 'banner/';
 const urlUpcomingEvent = urlCategoryList + 'upcoming_event/';
 
 const urlUpcomingEventDetail = urlCategoryList + 'upcoming_event_image/';
+
+const urlSliderList = urlCategoryList + 'slider_category/';
+
+const urlSubSlider = urlCategoryList + 'slider_sub_category/';

@@ -25,7 +25,7 @@ class BannerList extends StatelessWidget {
     list.sort((a, b) => a.id.compareTo(b.id));
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: list.length,

@@ -15,5 +15,5 @@ class CategoryModel extends CategoryEntity {
   }) : super(id: id, name: name, sequenceNo: sequenceNo, images: images);
 
   factory CategoryModel.fromJson(Map<String, dynamic> json) => CategoryModel(
-      id: json['id'], name: json['name'], sequenceNo: json['sequenceNo']);
+      id: json['id'], name: json['name'], sequenceNo: json['sequence_no']);
 }

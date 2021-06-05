@@ -2,7 +2,6 @@ import 'package:dartz/dartz.dart';
 import 'package:display/core/error/exception.dart';
 import 'package:display/core/error/failures.dart';
 import 'package:display/core/network/network_info.dart';
-import 'package:display/features/category/data/model/image_model.dart';
 import 'package:display/features/category/data/sources/remote_category_list.dart';
 import 'package:display/features/category/domain/entities/category_entity.dart';
 import 'package:display/features/category/domain/entities/image_entity.dart';

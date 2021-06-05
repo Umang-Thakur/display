@@ -24,7 +24,7 @@ class UpcomingEventListPage extends StatelessWidget {
     list.sort((a, b) => a.date.compareTo(b.date));
 
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 10),
+      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: list.length,

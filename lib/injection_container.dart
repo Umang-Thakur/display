@@ -5,6 +5,10 @@ import 'package:display/features/banner/data/repository/banner_list_repo_impl.da
 import 'package:display/features/banner/data/sources/banner_list_remote.dart';
 import 'package:display/features/banner/domain/repository/banner_repo.dart';
 import 'package:display/features/banner/presentation/bloc/banner_bloc.dart';
+import 'package:display/features/slider/data/repository/slider_repo_impl.dart';
+import 'package:display/features/slider/data/sources/slider_remote_impl.dart';
+import 'package:display/features/slider/domain/repository/slider_repo.dart';
+import 'package:display/features/slider/presentation/bloc/slider_bloc.dart';
 import 'package:display/features/upcoming_event/domain/repository/upcoming_repo.dart';
 import 'package:display/features/upcoming_event/presentation/bloc/upcomingevent_bloc.dart';
 import 'package:get_it/get_it.dart';
@@ -19,17 +23,21 @@ Future<void> init() async {
   // - Banner
   sl.registerFactory(() => BannerBloc(repo: sl()));
   sl.registerFactory(() => UpcomingeventBloc(repository: sl()));
+  sl.registerFactory(() => SliderBloc(repository: sl()));
 
   // - Repositories
   sl.registerLazySingleton<BannerRepository>(
       () => BannerListRepoImpl(networkInfo: sl(), remote: sl()));
   sl.registerLazySingleton<UpcomingEventRepo>(
       () => UpcomingEventRepoImpl(networkInfo: sl(), remote: sl()));
+  sl.registerLazySingleton<SliderRepository>(
+      () => SliderRepoImpl(networkInfo: sl(), remote: sl()));
 
   // - Data Sources
   sl.registerLazySingleton<BannerRemote>(() => BannerRemoteImpl(client: sl()));
   sl.registerLazySingleton<UpcomingEventRemote>(
       () => UpcomingEventRemoteImpl(client: sl()));
+  sl.registerLazySingleton<SliderRemote>(() => SliderRemoteImpl(client: sl()));
 
   // -Core
   sl.registerLazySingleton<NetworkInfo>(
